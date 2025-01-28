@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Studio Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js" defer></script>
+
+</head>
+<body>
+    <!-- Header Section -->
+
+    <!-- Placeholder for the header -->
+
+    <header id="main-header" class="header">
+      <div class="logo-container">
+          <img id="svg-logo" src="icons/AlbinoLogo.svg" alt="Logo">
+          <div id="lottie-logo" style="display: none;"></div>
+        </div>
+      <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <nav class="navigation" id="navigation">
+          <div class="navigation-logo" id="navigation-logo">
+              <!-- Lottie animation container -->
+              <div id="lottie-logo-nav"></div>
+          </div>
+          <ul>
+              <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+      
+          <div class="navigation-social-links">
+              <a href="https://www.instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+                  <img src="icons/instagram.svg" alt="Instagram Icon">
+              </a>
+              <a href="https://www.behance.net" target="_blank" class="social-icon" aria-label="Behance">
+                  <img src="icons/behance.svg" alt="Behance Icon">
+              </a>
+          </div>
+      </nav>
+      
+
+  </header>
+
+<section>
+    <div class="video-container-top" id="videoContainer">
+        <video id="video" src="videos/ALBINO SHOWREEL 2018.mp4" poster="images/poster_01.jpg"></video>
+        <div class="play-button" id="playButton"></div>
+        <div class="controls" id="controls">
+            <button class="control-button" id="playPause">
+                <span class="pause-icon" id="pauseIcon" style="display: none;">
+                  <!-- Custom SVG for the Pause Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <rect x="4" y="4" width="3" height="16" fill="white"/>
+                    <rect x="12" y="4" width="3" height="16" fill="white"/>
+                  </svg>
+                </span>
+                <span id="playIcon">▶</span>
+              </button>
+          <div class="timeline">
+            <input type="range" id="timeline" value="0" step="0.1">
+          </div>
+          <button class="control-button mute-button" id="mute">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <!-- Replace this SVG code with your custom mute icon SVG -->
+              <path class="st0" d="M21.47,22.17c-.23,0-.46-.05-.67-.16l-9.04-4.47H2.53c-.83,0-1.5-.67-1.5-1.5V7.95c0-.83.67-1.5,1.5-1.5h9.24L20.8,1.98c.47-.23,1.01-.21,1.46.07.44.28.71.75.71,1.28v17.34c0,.52-.27,1-.71,1.28-.24.15-.52.23-.79.23ZM21.69,20.22h0,0ZM3.03,15.55h8.85c.23,0,.46.05.67.16l8.42,4.16V4.13l-8.42,4.16c-.2.1-.43.16-.67.16H3.03v7.1ZM11.66,6.5s0,0,0,0h0Z"/>
+            </svg>   
+          </button>
+          
+          <button class="control-button fullscreen-button" id="fullscreen">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <!-- Replace this SVG code with your custom fullscreen icon SVG -->
+              <path class="st0" d="M2.73,8.54V3.93c0-.66.54-1.21,1.21-1.21h4.61V.73H3.93C2.16.73.73,2.16.73,3.93v4.61h2Z"/>
+              <path class="st0" d="M15.46,2.73h4.61c.66,0,1.21.54,1.21,1.21v4.61h2V3.93c0-1.77-1.44-3.21-3.21-3.21h-4.61v2Z"/>
+              <path class="st0" d="M21.27,15.46v4.61c0,.66-.54,1.21-1.21,1.21h-4.61v2h4.61c1.77,0,3.21-1.44,3.21-3.21v-4.61h-2Z"/>
+              <path class="st0" d="M8.54,21.27H3.93c-.66,0-1.21-.54-1.21-1.21v-4.61H.73v4.61c0,1.77,1.44,3.21,3.21,3.21h4.61v-2Z"/>       
+            </svg>
+          </button>
+        </div>
+    
+</section>
+
+<div class="portfolio-grid">
+  <div class="portfolio-item item-1">
+    <img src="/images/car_01.jpg">
+
+  </div>
+  <div class="portfolio-item item-2">
+    <img src="/images/car_02.jpg">
+
+  </div>
+  <div class="portfolio-item item-3">Project 3</div>
+  <div class="portfolio-item item-4">Project 4</div>
+  <div class="portfolio-item item-1">Project 1</div>
+  <div class="portfolio-item item-2">Project 2</div>
+  <div class="portfolio-item item-3">Project 3</div>
+  <div class="portfolio-item item-4">Project 4</div>
+  
+</div>
+
+
+
+
+<br><br><br><br><br><br>
+
+
+
+
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://www.behance.net" target="_blank" class="social-icon">
+                <img src="icons/behance.svg" alt="Behance">
+            </a>
+        </div>
+        <div class="copyright">
+            &copy; <span id="current-year"></span> Albino Animation. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+<script src="js/video.js" defer></script>
+<script src="js/carousel.js" defer></script>
+<script src="js/textblock.js" defer></script>
+
+</body>
+</html>

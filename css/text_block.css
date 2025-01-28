@@ -1,0 +1,210 @@
+
+/* General styles for the project-description */
+
+.project-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0px;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+
+  /* Create space equivalent to the height of the video */
+}
+
+.project-section div {
+  padding: 10px;
+}
+
+.project-name {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-variation-settings: "wght" 700; /* Set specific weight value */
+  text-transform: uppercase;
+  text-align: left;
+  
+}
+
+.project-copy {
+  font-family: 'Inter', sans-serif;
+  font-variation-settings: "wght" 200; /* Set specific weight value */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #808080; /* Grey text */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .project-section {
+    grid-template-columns: 1fr;
+  }
+
+  .project-name {
+    font-size: 1.3rem;
+  
+  }
+
+  .project-copy {
+    margin-bottom: 0px;
+  }
+
+  .project-section div {
+    padding: 0px;
+  }
+}
+
+
+
+
+/* General styles for the text-section */
+.text-section {
+  margin-top: 100vh; /* Adjust this to make sure it stays below the full-screen video */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem; /* Default large padding */
+  text-align: center;
+
+  background: linear-gradient(45deg, #ffffff, #ffffff, #ffffff, #f1f3f4);
+  background-size: 400% 400%; /* Make the gradient large enough to animate */
+  animation: gradientAnimation 20s ease infinite; /* Animate the gradient */
+
+  overflow: hidden; /* Prevent clipping during animations */
+  
+}
+
+/* Animation for the gradient */
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.text-section p {
+  
+  color: #111111; /* White text by default */
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px); /* Slight offset for animation */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+/* Highlight specific words or phrases */
+.text-section .highlight {
+  font-variation-settings: "wght" 500; /* Set specific weight value */
+  font-style: italic;
+}
+
+.text-section.visible p {
+  font-family: 'Inter', Serif; 
+  font-variation-settings: "wght" 200; /* Set specific weight value */
+  font-size: 1.5rem;
+  text-align: left;
+  line-height: 2rem;
+  color: #1c1c1c;
+  padding: 1rem 20%;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-section p:nth-child(2) {
+  transition-delay: 0.3s; /* Delay for second line */
+}
+.text-section p:nth-child(3) {
+  transition-delay: 0.6s; /* Delay for third line */
+}
+
+/* Responsive Design */
+@media (max-width: 768px){
+.text-section {
+   padding:1rem;
+
+}
+   
+
+  .text-section.text-section.visible p {
+    font-size: 1.3rem; /* Adjust font size for readability on smaller screens */
+    line-height: 1.5rem;
+    padding: 1rem 0;
+
+  }
+}
+
+/* Parallax Section */
+.parallax-text-section {
+  font-family: 'Noto Serif', serif;
+  font-size: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  height: 100vh; /* Full viewport height */
+  background-size: cover; /* Ensure the image scales proportionately to fill the section */
+  background-position: center center; /* Keep the image centered */
+  background-repeat: no-repeat;
+  overflow: hidden; /* Prevents scrolling overflow */
+}
+
+.parallax-text-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  z-index: 1; /* Ensure overlay is below text */
+}
+
+.parallax-text-section p {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px); /* Slight offset for animation */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 2; /* Ensure text is above the overlay */
+}
+
+.parallax-text-section.visible p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.parallax-text-section p:nth-child(2) {
+  transition-delay: 0.2s; /* Delay for second line */
+}
+.parallax-text-section p:nth-child(3) {
+  transition-delay: 0.4s; /* Delay for third line */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .parallax-text-section {
+    height: 60vh; /* Adjust height for smaller screens */
+    background-size: auto 170%; /* Ensure the background scales proportionately and slightly larger than the section */
+    background-position: center center; /* Keep image centered */
+    padding: 3rem 1rem; /* Smaller padding for mobile */
+  }
+
+  .parallax-text-section p {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+}

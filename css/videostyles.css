@@ -1,0 +1,184 @@
+/* Video Container Styles */
+
+
+.fullscreen-video-container {
+  position: absolute; /* Change to absolute positioning */
+  top: 0px; /* Adjust this to align it just below the header (assuming header height is 70px) */
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  z-index: -1; /* Ensures it stays behind other content */
+}
+
+.fullscreen-my-video {
+  
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+
+/* Full-Screen Video */
+.fullscreen-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.video-container-top {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: black;
+  z-index: 10;
+/*  translate: 0px -70px; */
+}
+
+
+
+.video-container-top video {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+
+
+.play-button {
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  background-image: url('../icons/play_icon.svg');
+  background-size: cover; /* Adjusts how the SVG is scaled */
+  background-position: center; /* Centers the SVG */
+  background-repeat: no-repeat; /* Ensures the SVG doesn't repeat */
+
+}
+
+
+.play-button:hover {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+
+/* Video Controls Styles */
+.controls {
+  position: absolute; /* Overlayed on video */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+  z-index: 2; /* Above video */
+}
+
+.video-container-top:hover .controls {
+  opacity: 1; /* Show on hover */
+}
+
+/* Control Button Styles */
+.control-button {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  position: relative; /* Allow for positioning */
+  margin-top: 2px; /* Adjust as needed */
+}
+
+#playIcon,
+.pause-icon {
+  display: none; /* Hide both initially */
+}
+
+#playIcon.visible {
+  display: block; /* Show play icon when active */
+}
+
+.pause-icon.visible {
+  display: block; /* Show pause icon when active */
+}
+
+.pause-icon svg {
+  width: 24px; /* Fixed size for pause icon */
+  height: 24px;
+}
+
+#playIcon {
+  font-size: 24px; /* Adjust size for play icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Timeline Styles */
+.timeline {
+  flex: 1;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.timeline input {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+.timeline input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  margin-top: -5px;
+}
+
+.timeline input::-webkit-slider-runnable-track {
+  height: 2px;
+  background: #fff;
+}
+
+/* Mute Button Styles */
+.mute-button svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+/* Fullscreen Button Styles */
+.fullscreen-button svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

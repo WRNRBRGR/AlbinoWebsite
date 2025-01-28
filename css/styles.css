@@ -1,0 +1,100 @@
+/* In styles.css */
+@import url('header.css');
+
+@import url('portfolio.css');
+
+@import url('footer.css');
+
+@import url('carousel.css');
+
+@import url('modal.css');
+
+@import url('text_block.css');
+
+@import url('videostyles.css');
+
+@import url('drawingboard.css');
+
+
+/* Import Google Font Noto Sans + Serif */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;900&display=swap" rel="stylesheet');
+
+
+
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    
+  /*  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; */
+}
+
+
+/* Starting state for fade-in*/
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  } 
+
+
+
+  
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
+
+    .portfolio {
+        display: block !important;
+    }
+
+    .portfolio-item {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Responsive Styles */
+@media (min-width: 1600px) {
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+        padding: 40px 10%;
+       
+    }
+
+
+
+}

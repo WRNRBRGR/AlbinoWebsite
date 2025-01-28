@@ -1,0 +1,46 @@
+/* Footer Styles */
+.footer {
+    position: relative;
+    background-color: #000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.25);
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+.copyright_nav {
+    color: rgb(143, 143, 143);
+    font-size: 10px;
+    position: fixed;
+    bottom: 2rem; /* Aligns it to the bottom */
+    
+}

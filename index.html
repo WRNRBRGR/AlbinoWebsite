@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Studio Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js" defer></script>
+    <script src="js/textblock.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div id="page-wrapper" class="fade-in">
+        <!-- Content of your page -->
+      
+   
+    <header id="main-header" class="header">
+        <div class="logo-container">
+            <img id="svg-logo" src="icons/AlbinoLogo.svg" alt="Logo">
+            <div id="lottie-logo" style="display: none;"></div>
+          </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <nav class="navigation" id="navigation">
+            <div class="navigation-logo" id="navigation-logo">
+               
+                <div id="lottie-logo-nav"></div>
+            </div>
+            <ul>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#ourwork">Our Work</a></li>
+                <li><a href="#showreels">Showreels</a></li>
+                <li><a href="#drawingboard">Drawing Board</a></li>
+                <li><a href="#contact">Reach Out</a></li>
+               
+            </ul>
+
+            <div class="navigation-social-links">
+                <a href="https://www.instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+                    <img src="icons/instagram_blk.svg" alt="Instagram Icon">
+                </a>
+                <a href="https://www.behance.net" target="_blank" class="social-icon" aria-label="Behance">
+                    <img src="icons/behance_blk.svg" alt="Behance Icon">
+                </a>
+                <a href="https://www.behance.net" target="_blank" class="social-icon" aria-label="ReachOut">
+                    <img src="icons/reachout_blk.svg" alt="Reach Out">
+                </a>
+
+            
+            </div>
+            <div class="copyright_nav">
+                &copy; <span id="current-year"></span> Albino Animation. All rights reserved.
+            </div>
+            
+        </nav>
+
+    </header>
+
+
+    <div class="fullscreen-video-container">
+        <video class="fullscreen-video" autoplay muted loop>
+            <source src="videos/CarFold.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="spacer"></div>
+    </div>
+    
+
+        <!-- Text Section -->
+    <section>
+        <div class="text-section" data-bg-color="#666">
+            <p>We’re <span class="highlight">Albino</span>, an animation studio shaped by our pursuit of rarities. Nimble and efficient, we produce breakthrough<span class="highlight"> 2D & 3D motion graphics and animation</span> for agencies, corporates, and internal teams around the globe.
+            </p>
+            <p>
+              We’ve been perfecting our craft since 2015, and pride ourselves on creating work that <span class="highlight">exceeds expectations</span>, <span class="highlight">connects with audiences</span>, and <span class="highlight">moves the needle</span> for our clients.
+            </p>
+          </div>
+    </section>
+        
+
+    <!-- Portfolio Section -->
+
+
+    <section id="portfolio" class="portfolio">
+        <!-- Portfolio Items (10 total) -->
+        <div class="portfolio-item large">
+            <video class="thumbnail-video" autoplay muted loop poster="projects/Fatafeat/FATAFEAT_Celebration_Poster0.jpg" loading="lazy">
+                <source src="projects/Fatafeat/FATAFEAT_Celebration_Thumb.webm" type="video/webm">
+                <source src="projects/Fatafeat/FATAFEAT_Celebration_Thumb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="fatafeat.html" class="thumbnail-link">
+                <div class="overlay"></div> <!-- Added for hover effect -->
+                <div class="title">
+                    <h2 class="portfolio-title">Fatafeat</h2>
+                    <h3 class="portfolio-subheading">Channel Idents</h3>
+                </div>
+            </a>
+        </div>
+        
+        <div class="portfolio-item small">
+            <video class="thumbnail-video" autoplay muted loop>
+                <source src="videos/Hyundai_i20_01.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="project2.html" class="thumbnail-link">
+                 <div class="overlay"></div>
+                 
+                 <div class="title">
+                    <h2 class="portfolio-title">Hyundai i20</h2>
+                    <h3 class="portfolio-subheading">Brand Animation</h3>
+                </div>
+            </a>
+        </div>
+        <div class="portfolio-item small">
+            <video class="thumbnail-video" autoplay muted loop>
+                <source src="videos/project3-loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="project3.html" class="thumbnail-link">
+                <div class="title">Project 3</div>
+            </a>
+        </div>
+        <div class="portfolio-item large">
+            <video class="thumbnail-video" autoplay muted loop poster="projects/Esprit/ESPRIT_OwnYourFlavour_Poster0.jpg" loading="lazy">
+                <source src="projects/Esprit/ESPRIT_OwnYourFlavour_Thumb.webm" type="video/webm">
+                <source src="projects/Esprit/ESPRIT_OwnYourFlavour_Thumb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="esprit.html" class="thumbnail-link">
+                <div class="overlay"></div> <!-- Added for hover effect -->
+                <div class="title">
+                    <h2 class="portfolio-title">Esprit</h2>
+                    <h3 class="portfolio-subheading">Brand Animation</h3>
+                </div>
+            </a>
+        </div>
+        <div class="portfolio-item small">
+            <video class="thumbnail-video" autoplay muted loop>
+                <source src="videos/project5-loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="project5.html" class="thumbnail-link">
+                <div class="title">Project 5</div>
+            </a>
+        </div>
+        <div class="portfolio-item small">
+            <video class="thumbnail-video" autoplay muted loop>
+                <source src="videos/project6-loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="project6.html" class="thumbnail-link">
+                <div class="title">Project 6</div>
+            </a>
+        </div>
+        <div class="portfolio-item large">
+            <video class="thumbnail-video" autoplay muted loop>
+                <source src="videos/project7-loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="project7.html" class="thumbnail-link">
+                <div class="title">Project 7</div>
+            </a>
+        </div>
+        <div class="portfolio-item small">
+            <video class="thumbnail-video" autoplay muted loop>
+                <source src="videos/project8-loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="project8.html" class="thumbnail-link">
+                <div class="title">Project 8</div>
+            </a>
+        </div>
+        <div class="portfolio-item small">
+            <video class="thumbnail-video" autoplay muted loop>
+                <source src="videos/project9-loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="project9.html" class="thumbnail-link">
+                <div class="title">Project 9</div>
+            </a>
+        </div>
+        <div class="portfolio-item large">
+            <video class="thumbnail-video" autoplay muted loop>
+                <source src="videos/project10-loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="project10.html" class="thumbnail-link">
+                <div class="title">Project 10</div>
+            </a>
+        </div>
+        
+    </section>
+</div>
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://www.behance.net" target="_blank" class="social-icon">
+                <img src="icons/behance.svg" alt="Behance">
+            </a>
+            <a href="mailto:info@albino.co.za" target="_blank" class="social-icon">
+                <img src="icons/reachout.svg" alt="ReachOut">
+            </a>
+        </div>
+        <div class="copyright">
+            &copy; <span id="footer-year"></span> Albino Animation. All rights reserved.
+        </div>
+    </div>
+</footer>
+</div>
+ <!-- <script src="js/hamburger.js" defer></script>  -->
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+/* Portfolio Section */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 40px;
+    /*margin-top: 100vh;  Adjust this to make sure it stays below the full-screen video */
+}
+
+.portfolio-item {
+    background-color: rgb(127, 127, 127);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.portfolio-item.visible {
+    opacity: 1;
+}
+
+.portfolio-item.large {
+    grid-column: span 2;
+}
+
+.thumbnail-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Added overlay for hover background effect */
+.thumbnail-link .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.4s ease;
+}
+
+.thumbnail-link:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.8); /* Fade in black background */
+}
+
+.thumbnail-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Portfolio Title Animation */
+.portfolio-item .title {
+    position: absolute;
+    top: 45%; /* Vertically center */
+    right: 0%; /* Align to the right with some spacing */
+    transform: translateX(2%); /* Start outside the thumbnail */
+    opacity: 0; /* Start fully transparent */
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: right; /* Align text to the right */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    justify-content: center;
+}
+
+.portfolio-item:hover .title {
+    transform: translate(-50%, 0%); /* Move slightly upward */
+    opacity: 1; /* Fade in */
+}
+
+/* Portfolio Title */
+.portfolio-title {
+    margin-bottom: 0px;
+}
+
+/* Portfolio Subheading */
+.portfolio-subheading {
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out 0.2s;
+}
+
+.portfolio-item:hover .portfolio-subheading {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Mobile Scaling Fix */
+.thumbnail-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills available space */
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .thumbnail-link {
+        font-size: 1rem;
+    }
+    
+    .portfolio-subheading {
+        font-size: 0.8rem;
+       
+    }
+   
+  }
+
+
+
+
+
+
+
+
+
+
+  /* New Portfolio Grid Layout */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 6 equal columns */
+    gap: 2px; /* No gaps */
+    padding: 0; /* No padding */
+    width: 100%; /* Full width */
+}
+
+.portfolio-grid .portfolio-item {
+    background-color: rgb(127, 127, 127);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px; /* Set fixed or responsive height */
+    margin: 0; /* Ensure no margins */
+    border-radius: 0; /* Remove rounding for edge-to-edge alignment */
+}
+
+/* Grid spans for the new pattern */
+.portfolio-grid .item-1 {
+    grid-column: span 2;
+}
+
+.portfolio-grid .item-2 {
+    grid-column: span 1;
+}
+
+.portfolio-grid .item-3 {
+    grid-column: span 1;
+}
+
+.portfolio-grid .item-4 {
+    grid-column: span 2;
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 768px) {
+
+    .portfolio {
+        display: grid;
+        gap: 10px; /* No gaps */
+        padding: 0; /* No padding */
+
+    }
+
+
+    .portfolio-grid {
+        
+        grid-template-columns: repeat(1, 1fr); /* Single column */
+    }
+
+    .portfolio-grid .portfolio-item {
+        grid-column: span 1; /* Full-width */
+    }
+}

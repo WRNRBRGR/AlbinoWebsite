@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Studio Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js" defer></script>
+
+</head>
+<body>
+    <!-- Header Section -->
+
+    <!-- Placeholder for the header -->
+
+    <header id="main-header" class="header">
+      <div class="logo-container">
+          <img id="svg-logo" src="icons/AlbinoLogo.svg" alt="Logo">
+          <div id="lottie-logo" style="display: none;"></div>
+        </div>
+      <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <nav class="navigation" id="navigation">
+          <div class="navigation-logo" id="navigation-logo">
+              <!-- Lottie animation container -->
+              <div id="lottie-logo-nav"></div>
+          </div>
+          <ul>
+              <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+      
+          <div class="navigation-social-links">
+              <a href="https://www.instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
+                  <img src="icons/instagram.svg" alt="Instagram Icon">
+              </a>
+              <a href="https://www.behance.net" target="_blank" class="social-icon" aria-label="Behance">
+                  <img src="icons/behance.svg" alt="Behance Icon">
+              </a>
+          </div>
+      </nav>
+      
+
+  </header>
+
+
+<div class="staggered-grid">
+  <div class="row" data-columns="4" style="--row-height: 20%;">
+    <img src="images/car_01.jpg" alt="Thumbnail 1" class="lightbox-trigger">
+    <img src="images/car_02.jpg" alt="Thumbnail 2" class="lightbox-trigger">
+    <img src="images/car_03.jpg" alt="Thumbnail 3" class="lightbox-trigger">
+    <img src="images/car_04.jpg" alt="Thumbnail 4" class="lightbox-trigger">
+  </div>
+  <div class="row" data-columns="2" style="--row-height: 20%;">
+    <img src="images/car_01.jpg" alt="Thumbnail 1" class="lightbox-trigger">
+    <img src="images/car_02.jpg" alt="Thumbnail 2" class="lightbox-trigger">
+  </div>
+  <div class="row" data-columns="3" style="--row-height: 700px;">
+    <img src="images/car_03.jpg" alt="Thumbnail 5" class="lightbox-trigger">
+    <img src="images/car_02.jpg" alt="Thumbnail 6" class="lightbox-trigger">
+    <img src="images/car_01.jpg" alt="Thumbnail 7" class="lightbox-trigger">
+  </div>
+  <div class="row" data-columns="4" style="--row-height: 2%;">
+    <img src="images/car_01.jpg" alt="Thumbnail 1" class="lightbox-trigger">
+    <img src="images/car_02.jpg" alt="Thumbnail 2" class="lightbox-trigger">
+    <img src="images/car_03.jpg" alt="Thumbnail 3" class="lightbox-trigger">
+    <img src="images/car_04.jpg" alt="Thumbnail 4" class="lightbox-trigger">
+  </div>
+  <div class="row" data-columns="1" style="--row-height: 2%;">
+    <img src="images/car_02.jpg" alt="Thumbnail 2" class="lightbox-trigger">
+  </div>
+</div>
+
+<!-- Lightbox 
+
+  <button id="lightbox-close" class="lightbox-close">✖</button>
+  <button id="lightbox-prev" class="lightbox-prev">◀</button>
+  <button id="lightbox-next" class="lightbox-next">▶</button>
+  <img id="lightbox-image" class="lightbox-image" src="" alt="Full Image">-->
+
+  <div id="lightbox" class="lightbox">
+<button id="lightbox-close" class="lightbox-close" aria-label="Close">
+  <img src="icons/Lightbox_close.svg" alt="Close">
+</button>
+<button id="lightbox-prev" class="lightbox-prev" aria-label="Previous">
+  <img src="icons/Lightbox_prev.svg" alt="Previous">
+</button>
+<button id="lightbox-next" class="lightbox-next" aria-label="Next">
+  <img src="icons/Lightbox_next.svg" alt="Next">
+</button>
+<img id="lightbox-image" class="lightbox-image" src="" alt="Full Image">
+</div>
+
+
+<br><br><br><br><br><br>
+
+
+
+
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="icons/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://www.behance.net" target="_blank" class="social-icon">
+                <img src="icons/behance.svg" alt="Behance">
+            </a>
+        </div>
+        <div class="copyright">
+            &copy; <span id="current-year"></span> Albino Animation. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script src="js/lightbox.js" defer></script>
+<script src="js/script.js" defer></script>
+<script src="js/video.js" defer></script>
+<script src="js/carousel.js" defer></script>
+<script src="js/textblock.js" defer></script>
+
+</body>
+</html>

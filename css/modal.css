@@ -1,0 +1,89 @@
+.illustration-item {
+    position: relative;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.illustration-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.illustration-item:hover img {
+    transform: scale(1.1); /* Scale image on hover */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#modal-image {
+    width: 100%;
+    height: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.illustration-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts for any screen size */
+    gap: 10px; /* Adjust the gap between the items */
+    margin: 0 auto; /* Centers the grid */
+}
+
+.illustration-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.illustration-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the images cover the space nicely */
+    transition: transform 0.3s ease-in-out;
+}
+
+.illustration-item:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Randomize image spans for dynamic grid layout */
+.illustration-item:nth-child(odd) {
+    grid-column: span 2;
+}
+.illustration-item:nth-child(even) {
+    grid-row: span 2;
+}
+
+@media (max-width: 768px) {
+    .illustration-gallery {
+        grid-template-columns: 1fr;
+    }
+    .illustration-item {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}

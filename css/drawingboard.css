@@ -1,0 +1,110 @@
+.staggered-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* No gaps between rows */
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: repeat(var(--columns, 1), 1fr); /* Default to 1 column */
+    height: var(--row-height, 200px); /* Default row height */
+  }
+  
+  .row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Dynamically set columns based on data attribute */
+  .row[data-columns="4"] {
+    --columns: 4;
+  }
+  .row[data-columns="3"] {
+    --columns: 3;
+  }
+  .row[data-columns="2"] {
+    --columns: 2;
+  }
+  .row[data-columns="1"] {
+    --columns: 1;
+  }
+  
+
+
+
+
+/* Lightbox container */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    /*  border: 2px solid white; 
+    box-shadow: 0 0 10px rgb(44, 44, 44);*/
+  }
+  
+  .lightbox button {
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+  
+  #lightbox-close {
+    top: 10px;
+    right: 10px;
+  }
+  
+  #lightbox-prev {
+    left: 20px;
+  }
+  
+  #lightbox-next {
+    right: 20px;
+  }
+  
+  /* Show lightbox when active */
+  .lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+
+  button svg,
+button img {
+  width: 20px;
+  height: 20px;
+  fill: rgb(150, 150, 150); /* For inline SVGs */
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover svg {
+  fill: #ffffff; /* Change color on hover */
+}
